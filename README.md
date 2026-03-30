@@ -34,4 +34,4 @@
 # Additional information
 
 - All completed task solutions are correct, but they are not necessarily the most optimal methods. The approaches used are intentionally simple for learning purposes.
-- The final task of the second assignment was optional, so it is not solved.
+- The last task in the second assignment was solved after the exam, because it was an additional (optional) task.
