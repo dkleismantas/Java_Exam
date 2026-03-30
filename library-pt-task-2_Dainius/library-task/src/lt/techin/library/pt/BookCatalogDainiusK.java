@@ -15,7 +15,9 @@ public class BookCatalogDainiusK implements BookCatalog {
     public void addBook(Book book) {
         if (book == null ||
                 book.getIsbn() == null ||
-                book.getIsbn().isEmpty()) {
+                book.getIsbn().isEmpty() ||
+                book.getTitle() == null ||
+                book.getTitle().isEmpty()) {
             throw new IllegalArgumentException();
         }
         for (Book i : books) {
@@ -155,6 +157,8 @@ public class BookCatalogDainiusK implements BookCatalog {
 
     @Override
     public Map<String, List<Book>> groupBooksByPublisher() {
-        return Map.of();
+        return books
+                .stream()
+                .collect(Collectors.groupingBy(Book::getPublisher));
     }
 }
